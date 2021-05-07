@@ -1,18 +1,18 @@
 function checkSign(){
-    let sign = prompt('Enter an arithmetic sign');
+    let sign;
 
-    while ((sign !== '+') && (sign !== '-') && (sign !== '*') && (sign !== '/')) {
-        sign = prompt('Enter an arithmetic sign');
-    }
+    do {
+       sign = prompt('Enter an arithmetic sign');
+    } while ((sign !== '+') && (sign !== '-') && (sign !== '*') && (sign !== '/'));
     return sign;
 }
 
 function checkNumber(question) {
-    let number = prompt(question);
+    let number;
 
-    while (!number || (number === '') || isNaN(+number)) {
+    do {
         number = prompt(question);
-    }
+    } while (!number || (number === '') || isNaN(+number));
     return (+number);
 }
 
